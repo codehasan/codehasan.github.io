@@ -45,6 +45,8 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#deploy">Deploy</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -84,34 +86,60 @@ Of course, no one template may serve all your needs. That's why this project is 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow the instructions to setup the project locally, and deploy it on GitHub Pages.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Make sure you have either <code>npm</code> or <code>yarn</code> installed and upgraded to the latest version.
+* yarn ([Installation Guide](https://www.hostinger.com/tutorials/how-to-install-yarn))
+* npm ([Installation Guide](https://kinsta.com/blog/how-to-install-node-js))
+  
+You also need <code>git</code> to clone this repo locally.
+* git ([Installation Guide](https://kinsta.com/knowledgebase/install-git))
 
-### Installation
+### Local Setup
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+To run and test the project locally in your computer, follow the below steps.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/codehasan/codehasan.github.io.git
+   ```
+2. Open the cloned directory
+   ```sh
+   cd codehasan.github.io
    ```
 3. Install NPM packages
+  - npm
+    ```sh
+    npm install
+    ```
+  - yarn
+    ```sh
+    yarn
+    ```
+4. Run the website in a browser
    ```sh
-   npm install
+   npm run dev
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+
+### Configuration
+
+1. Edit ```homepage``` attribute in ```package.json``` and set it to your domain. If you're deploying in github pages, it will be, ```https://<github-username>.github.io```
+
+### Deploy
+
+* Build the project
+   ```sh
+   npm run build
    ```
+
+##### Deploy in GitHub Pages
+
+  1. Create a repository with the name, ```<github-username>.github.io```. Here, ```<github-username>``` should be replaced with your actual github username.
+  2. Push the local project files in this repository.
+  3. Open settings of your repository, navigate to ```Pages``` section. Select the branch where you pushed your files.
+  4. Select the root folder to be the folder where npm generated the built project files. By default, it will be ```dist``` folder.
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
@@ -138,7 +166,18 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
+```
+The MIT License (MIT)
 
+Copyright (c) 2024 Ratul Hasan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+```
 
 <!-- CONTACT -->
 ## Contact
