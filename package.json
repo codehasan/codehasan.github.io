@@ -1,6 +1,8 @@
 {
   "name": "portfolio",
   "homepage": "https://codehasan.github.io",
+  "description": "Portfolio website of Ratul Hasan @codehasan",
+  "author": "Ratul Hasan @codehasan",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
