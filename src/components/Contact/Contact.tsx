@@ -3,6 +3,7 @@ import { ContactWrapper, EmailSection, Form, Header } from './ContactStyles';
 import { FaEnvelope } from 'react-icons/fa';
 import { Section } from '../About/AboutStyles';
 import HighlightedWords from '../Text/HighlightedWords';
+import { Button } from '../Button/Button';
 
 const Contact: React.FC = () => {
   const [, setShowTooltip] = useState(false);
@@ -28,12 +29,10 @@ const Contact: React.FC = () => {
           <input type="text" name="_subject" placeholder="Subject" required />
           <textarea name="message" placeholder="Message" required />
           <div className="form-buttons">
-            <button className="btn btn-primary" type="submit">
+            <Button type="submit" primary>
               Send Message
-            </button>
-            <button className="btn btn-secondary" type="reset">
-              Clear Form
-            </button>
+            </Button>
+            <Button type="reset">Clear Form</Button>
           </div>
           <input type="hidden" name="_next" value={window.location.href + 'thanks.html'} />
           <input type="hidden" name="_template" value="box" />

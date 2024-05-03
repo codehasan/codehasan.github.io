@@ -1,5 +1,6 @@
 import React from 'react';
 import { SiderBar, CloseIcon, NavMenu, NavLink, NavBtn } from './DropdownStyles';
+import { Button } from '../Button/Button';
 
 interface DropdownProps {
   isOpen: boolean;
@@ -23,12 +24,11 @@ const Dropdown: React.FC<DropdownProps> = ({ isOpen, toggle }) => {
       </NavMenu>
       <NavBtn onClick={toggle}>
         <a
-          className="btn btn-primary"
           href="https://linkedin.com/in/pedro-sales-muniz"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Resume
+          <Button primary>Resume</Button>
         </a>
       </NavBtn>
     </SiderBar>

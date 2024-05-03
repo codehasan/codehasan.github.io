@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from './HeaderStyles';
+import { Button } from '../Button/Button';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +32,8 @@ const Header: React.FC = () => {
             </NavLink>
           </NavMenu>
           <NavBtn>
-            <a
-              className="btn btn-primary"
-              href="https://linkedin.com/in/codehasan"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
+            <a href="https://linkedin.com/in/codehasan" target="_blank" rel="noopener noreferrer">
+              <Button primary>Resume</Button>
             </a>
           </NavBtn>
           <Bars onClick={toggle} />

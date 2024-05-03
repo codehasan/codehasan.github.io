@@ -8,6 +8,7 @@ import {
   TechCard,
   BtnGroup,
 } from './ProjectCardStyles';
+import { Button } from '../Button/Button';
 
 const ProjectCard: React.FC = () => {
   return (
@@ -27,23 +28,13 @@ const ProjectCard: React.FC = () => {
             </TechCardContainer>
             <BtnGroup>
               {list.github && (
-                <a
-                  className="btn btn-secondary"
-                  href={list.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
+                <a href={list.github} target="_blank" rel="noopener noreferrer">
+                  <Button style={{ marginRight: '1rem' }}>Github</Button>
                 </a>
               )}
               {list.liveDemo && (
-                <a
-                  className="btn btn-primary"
-                  href={list.liveDemo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Demo ➜
+                <a href={list.liveDemo} target="_blank" rel="noopener noreferrer">
+                  <Button primary>Demo ➜</Button>
                 </a>
               )}
             </BtnGroup>
