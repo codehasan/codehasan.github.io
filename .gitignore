@@ -4,6 +4,7 @@
 
 # NPM packages and locks
 node_modules
+*.lock
 
 # Logs
 logs
