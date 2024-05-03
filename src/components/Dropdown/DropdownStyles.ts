@@ -2,7 +2,7 @@ import { FaTimes } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
 
-export const SiderBar = styled.div<{ isOpen: boolean }>`
+export const SiderBar = styled.div<{ $open: string | null }>`
   background: #151418;
   position: fixed;
   height: 100%;
@@ -14,8 +14,8 @@ export const SiderBar = styled.div<{ isOpen: boolean }>`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  opacity: ${(props) => (props.$open ? '100%' : '0')};
+  top: ${(props) => (props.$open ? '0' : '-100%')};
 `;
 
 export const CloseIcon = styled(FaTimes)`

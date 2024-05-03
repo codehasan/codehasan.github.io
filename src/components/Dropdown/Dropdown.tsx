@@ -8,7 +8,7 @@ interface DropdownProps {
 
 const Dropdown: React.FC<DropdownProps> = ({ isOpen, toggle }) => {
   return (
-    <SiderBar isOpen={isOpen} onClick={toggle}>
+    <SiderBar $open={isOpen ? 'open' : null} onClick={toggle}>
       <CloseIcon onClick={toggle} />
       <NavMenu>
         <NavLink onClick={toggle} className="menu-item" to="projects">
