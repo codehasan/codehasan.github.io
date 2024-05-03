@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Image } from './LazyImageStyles';
+import classNames from 'classnames';
 
 interface LazyImageProps {
   src: string;
@@ -12,7 +12,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
 
   useEffect(() => {
     const handleImageLoad = () => {
-      imgRef.current?.style.removeProperty('animation');
+      imgRef.current?.classList.remove('skeleton');
     };
 
     if (imgRef.current?.complete) {
@@ -27,7 +27,14 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
   }, []);
 
   return (
-    <Image ref={imgRef} className={className} loading="lazy" decoding="async" src={src} alt={alt} />
+    <img
+      ref={imgRef}
+      className={classNames('skeleton', className)}
+      loading="lazy"
+      decoding="async"
+      src={src}
+      alt={alt}
+    />
   );
 };
 
