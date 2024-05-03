@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import { HeroContainer, HeroWrapper, HeroText, HeroSection } from './HeroStyles';
 import SocialLinks from '../Social/SocialLinks';
-import MakeClouds from './MakeClouds';
+import MakeClouds from '../Cloud/MakeClouds';
 import HighlightedWords from '../Text/HighlightedWords';
 
 const Hero: React.FC = () => {

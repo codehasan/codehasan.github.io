@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import * as CloudIcons from './CloudIcons';
+import { SVGContainer } from './CloudStyles';
 
 interface CloudProps {
   roll: string;
@@ -18,32 +18,10 @@ const Cloud: React.FC<CloudProps> = ({ roll, top, pulse, size, offset }) => {
   }
 
   return (
-    <SVGContainer roll={roll} top={top} pulse={pulse} size={size} offset={offset}>
+    <SVGContainer $roll={roll} $top={top} $pulse={pulse} $size={size} $offset={offset}>
       {clouds[randomizeValue(0, clouds.length)]}
     </SVGContainer>
   );
 };
-
-export const SVGContainer = styled.div<{
-  roll: string;
-  top: string;
-  pulse: string;
-  size: string;
-  offset: string;
-}>`
-  position: absolute;
-
-  width: ${(props) => props.size};
-  top: ${(props) => props.top};
-  overflow: hidden;
-  left: ${(props) => props.offset};
-
-  animation: pulse ${(props) => props.pulse} ease-in-out infinite alternate,
-    roll ${(props) => props.roll} linear forwards;
-
-  svg {
-    color: white;
-  }
-`;
 
 export default Cloud;
