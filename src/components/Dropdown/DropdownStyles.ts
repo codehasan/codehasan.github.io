@@ -1,9 +1,8 @@
-import React from 'react';
 import { FaTimes } from 'react-icons/fa';
-import styled from '@emotion/styled';
 import { Link as ScrollLink } from 'react-scroll';
+import styled from '@emotion/styled';
 
-const SiderBar = styled.div`
+export const SiderBar = styled.div<{ isOpen: boolean }>`
   background: #151418;
   position: fixed;
   height: 100%;
@@ -19,7 +18,7 @@ const SiderBar = styled.div`
   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
 `;
 
-const CloseIcon = styled(FaTimes)`
+export const CloseIcon = styled(FaTimes)`
   font-size: 2rem;
   color: #fff;
   position: absolute;
@@ -58,34 +57,3 @@ export const NavBtn = styled.div`
     font-size: 1.4rem !important;
   }
 `;
-
-function Dropdown({ isOpen, toggle }) {
-  return (
-    <SiderBar isOpen={isOpen} onClick={toggle}>
-      <CloseIcon onClick={toggle} />
-      <NavMenu>
-        <NavLink onClick={toggle} className="menu-item" to="projects">
-          Projects
-        </NavLink>
-        <NavLink onClick={toggle} className="menu-item" to="about">
-          About
-        </NavLink>
-        <NavLink onClick={toggle} className="menu-item" to="contact">
-          Contact
-        </NavLink>
-      </NavMenu>
-      <NavBtn onClick={toggle}>
-        <a
-          className="btn btn-primary"
-          href="https://linkedin.com/in/pedro-sales-muniz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
-      </NavBtn>
-    </SiderBar>
-  );
-}
-
-export default Dropdown;

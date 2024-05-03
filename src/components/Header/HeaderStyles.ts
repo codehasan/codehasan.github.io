@@ -26,7 +26,7 @@ export const NavLink = styled(ScrollLink)`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.div<{ to: string }>`
   img {
     width: 47px;
     height: 47px;

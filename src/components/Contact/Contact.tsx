@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ContactWrapper, EmailSection, Form, Header } from './ContactElements';
+import { ContactWrapper, EmailSection, Form, Header } from './ContactStyles';
 import { FaEnvelope } from 'react-icons/fa';
-import { Section } from '../About/AboutElements';
-import { HighlightedWords } from '../HighlightedWords';
+import { Section } from '../About/AboutStyles';
+import HighlightedWords from '../Text/HighlightedWords';
 
 function Contact() {
   const [showTooltip, setShowTooltip] = useState(false);

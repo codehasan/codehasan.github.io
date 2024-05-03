@@ -2,10 +2,18 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import * as CloudIcons from './CloudIcons';
 
-export default function Cloud({ roll, top, pulse, size, offset }) {
-  const [clouds, setClouds] = useState([CloudIcons.C3.call(), CloudIcons.C4.call()]);
+interface CloudProps {
+  roll: string;
+  top: string;
+  pulse: string;
+  size: string;
+  offset: string;
+}
 
-  function randomizeValue(min, max) {
+export default function Cloud({ roll, top, pulse, size, offset }: CloudProps) {
+  const [clouds] = useState([CloudIcons.C3(), CloudIcons.C4()]);
+
+  function randomizeValue(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
@@ -16,7 +24,13 @@ export default function Cloud({ roll, top, pulse, size, offset }) {
   );
 }
 
-export const SVGContainer = styled.div`
+export const SVGContainer = styled.div<{
+  roll: string;
+  top: string;
+  pulse: string;
+  size: string;
+  offset: string;
+}>`
   position: absolute;
 
   width: ${(props) => props.size};

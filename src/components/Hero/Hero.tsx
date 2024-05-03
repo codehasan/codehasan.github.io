@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../Header/Header';
-import { HeroContainer, HeroWrapper, HeroText, HeroSection } from './HeroElements';
-import SocialLinks from '../SocialIcon/SocialLinks';
-import { MakeClouds } from './MakeClouds';
-import { HighlightedWords } from '../HighlightedWords';
+import { HeroContainer, HeroWrapper, HeroText, HeroSection } from './HeroStyles';
+import SocialLinks from '../Social/SocialLinks';
+import MakeClouds from './MakeClouds';
+import HighlightedWords from '../Text/HighlightedWords';
 
 function Hero() {
   return (

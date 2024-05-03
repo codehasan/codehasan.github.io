@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LazyImage from '../../utils/LazyImage';
+import LazyImage from '../Image/LazyImage';
 
 export const sizing = {
   paddingExterior: {

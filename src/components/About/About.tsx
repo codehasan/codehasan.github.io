@@ -1,9 +1,14 @@
 import React from 'react';
-import { ImageFull, Img, Bio, Section, FeatureContainer } from './AboutElements';
-import Skills from './Skills';
-import { HighlightedWords } from '../HighlightedWords';
+import { ImageFull, Img, Bio, Section, FeatureContainer } from './AboutStyles';
+import Skills from '../Tag/Skills';
+import HighlightedWords from '../Text/HighlightedWords';
 
-export const Feature = ({ header, body }) => {
+interface AboutProps {
+  header: string;
+  body: string;
+}
+
+export const Feature = ({ header, body }: AboutProps) => {
   return (
     <FeatureContainer>
       <h3 className="text-xl">{header}</h3>

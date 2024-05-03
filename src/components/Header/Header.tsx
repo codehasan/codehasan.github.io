@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
-import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from './HeaderElements';
+import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from './HeaderStyles';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const Header = () => {
           <NavBtn>
             <a
               className="btn btn-primary"
-              href="https://linkedin.com/in/pedro-sales-muniz"
+              href="https://linkedin.com/in/codehasan"
               target="_blank"
               rel="noopener noreferrer"
             >

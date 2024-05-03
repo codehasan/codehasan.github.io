@@ -1,9 +1,6 @@
-import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'react-scroll';
-import SocialLinks from '../SocialIcon/SocialLinks';
 
-const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer`
   position: relative;
   padding: 2rem clamp(1rem, 7vw, 200px);
   z-index: 2;
@@ -13,7 +10,7 @@ const StyledFooter = styled.footer`
   font-weight: var(--fs-bold);
 `;
 
-const FooterContents = styled.div`
+export const FooterContents = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -29,7 +26,7 @@ const FooterContents = styled.div`
   }
 `;
 
-const TitleSection = styled.div`
+export const TitleSection = styled.div`
   max-width: 200px;
   color: white;
   padding: 1rem 0;
@@ -49,7 +46,7 @@ const TitleSection = styled.div`
   }
 `;
 
-const LinksSection = styled.div`
+export const LinksSection = styled.div`
   width: 200px;
   padding: 1rem 0;
 
@@ -71,7 +68,7 @@ const LinksSection = styled.div`
   }
 `;
 
-const SocialSection = styled.div`
+export const SocialSection = styled.div`
   width: 200px;
   padding: 1rem 0;
 
@@ -95,30 +92,3 @@ const SocialSection = styled.div`
     }
   }
 `;
-
-function Footer() {
-  return (
-    <StyledFooter id="footer-base">
-      <FooterContents>
-        <TitleSection>
-          <a href="/">Ratul Hasan</a>
-          <div>© {new Date().getFullYear()}, Built and designed by Ratul Hasan</div>
-        </TitleSection>
-        <LinksSection>
-          <div className="heading">Links</div>
-          <div className="links">
-            <Link to="projects">Projects</Link>
-            <Link to="about">About</Link>
-            <Link to="contact">Contact</Link>
-          </div>
-        </LinksSection>
-        <SocialSection>
-          <div className="heading">Get in touch</div>
-          <SocialLinks />
-        </SocialSection>
-      </FooterContents>
-    </StyledFooter>
-  );
-}
-
-export default Footer;

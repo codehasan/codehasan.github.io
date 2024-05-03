@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectList } from '../../../data/ProjectData';
+import { ProjectList } from '../../data/ProjectData';
 import {
   Card,
   CardLeft,
@@ -7,7 +7,7 @@ import {
   TechCardContainer,
   TechCard,
   BtnGroup,
-} from './ProjectCardElements';
+} from './ProjectCardStyles';
 
 function ProjectCard() {
   return (
@@ -15,31 +15,31 @@ function ProjectCard() {
       {ProjectList.map((list, index) => (
         <Card key={index}>
           <CardLeft>
-            <img src={list.img} alt={list.name} />
+            <img src={list.img} alt={list.title} />
           </CardLeft>
           <CardRight>
             <h4>{list.title}</h4>
             <p>{list.description}</p>
             <TechCardContainer>
-              {list.tech_stack.map((tech, index) => (
+              {list.techStack.map((tech, index) => (
                 <TechCard key={index}>{tech}</TechCard>
               ))}
             </TechCardContainer>
             <BtnGroup>
-              {list.github_url.length > 0 && (
+              {list.github && (
                 <a
                   className="btn btn-secondary"
-                  href={list.github_url}
+                  href={list.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Github
                 </a>
               )}
-              {list.demo_url.length > 0 && (
+              {list.liveDemo && (
                 <a
                   className="btn btn-primary"
-                  href={list.demo_url}
+                  href={list.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

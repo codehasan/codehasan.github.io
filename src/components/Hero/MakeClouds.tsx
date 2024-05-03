@@ -2,8 +2,21 @@ import React, { useMemo } from 'react';
 import Cloud from './Cloud';
 import styled from '@emotion/styled';
 
-export const MakeClouds = ({ cloudCount }) => {
-  const randomizeValue = (min, max) => {
+const CloudContainer = styled.div`
+  width: 100%;
+  overflow-x: clip;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+interface MakeCloudProps {
+  cloudCount: number;
+}
+
+const MakeClouds = ({ cloudCount }: MakeCloudProps) => {
+  const randomizeValue = (min: number, max: number) => {
     return Math.random() * (max - min) + min;
   };
 
@@ -25,11 +38,4 @@ export const MakeClouds = ({ cloudCount }) => {
   return <CloudContainer>{cloudsArray}</CloudContainer>;
 };
 
-export const CloudContainer = styled.div`
-  width: 100%;
-  overflow-x: clip;
-  opacity: 0.4;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
+export default MakeClouds;

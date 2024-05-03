@@ -25,8 +25,8 @@ function ScrollToTop() {
   const [buttonBottom, setButtonBottom] = useState('20px');
   const scrollThresholdRef = useRef(500);
   const overlapThresholdRef = useRef(10);
-  const fabRef = useRef();
-  const footerRef = useRef();
+  const fabRef = useRef<HTMLButtonElement>(null);
+  const footerRef = useRef<HTMLDivElement>();
 
   const handleClick = () => {
     setOpen(false);
@@ -41,10 +41,10 @@ function ScrollToTop() {
         setShouldRender(false);
       }
 
-      if (fabRef.current) {
-        var fabRect = fabRef.current.getBoundingClientRect();
-        var footerRect = footerRef.current.getBoundingClientRect();
+      var fabRect = fabRef.current?.getBoundingClientRect();
+      var footerRect = footerRef.current?.getBoundingClientRect();
 
+      if (fabRect && footerRect) {
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         const visibleHeight =
           Math.min(footerRect.bottom, windowHeight) - Math.max(footerRect.top, 0);
@@ -63,10 +63,10 @@ function ScrollToTop() {
       }
     };
 
-    footerRef.current = document.querySelector('#footer-base');
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    footerRef.current = document.querySelector('#footer-base') as HTMLDivElement;
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

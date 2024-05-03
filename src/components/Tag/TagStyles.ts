@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const Tags = styled.ul`
@@ -27,7 +26,7 @@ export const Tags = styled.ul`
   }
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -38,7 +37,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const StyledTags = styled(Tags)`
+export const StyledTags = styled(Tags)`
   width: 100%;
   justify-content: center !important;
 
@@ -58,30 +57,3 @@ const StyledTags = styled(Tags)`
     font-size: 1rem;
   }
 `;
-
-// cms: Content Management System
-const skills = [
-  { name: 'Solidity', type: 'backend' },
-  { name: 'Foundry', type: 'backend' },
-  { name: 'Typescript', type: 'backend' },
-  { name: 'React', type: 'frontend' },
-  { name: 'Node.js', type: 'backend' },
-  { name: 'HTML', type: 'frontend' },
-  { name: 'CSS', type: 'frontend' },
-  { name: 'Next.js', type: 'frontend' },
-  { name: 'Hardhat', type: 'tools' },
-];
-
-export default function Skills() {
-  return (
-    <Wrapper>
-      <StyledTags>
-        {skills.map((skill, i) => (
-          <li key={`skill-i-${i}`} className={skill.type}>
-            {skill.name}
-          </li>
-        ))}
-      </StyledTags>
-    </Wrapper>
-  );
-}
