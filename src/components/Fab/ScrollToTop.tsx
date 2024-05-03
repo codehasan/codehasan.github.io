@@ -1,26 +1,9 @@
-import { IconButton, Tooltip, styled } from '@mui/material';
 import React, { useState, useEffect, useRef } from 'react';
-import { MdKeyboardArrowUp } from 'react-icons/md';
 import { animateScroll as scroll } from 'react-scroll';
-
-const StyledIconButton = styled(IconButton)`
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: white;
-  padding: 10px;
-  transition: bottom 0.3s ease-out;
-`;
-
-const StyledArrowIcon = styled(MdKeyboardArrowUp)`
-  background-color: #007bff;
-  border-radius: 999px;
-  padding: 5px;
-  box-shadow: 0px 4px 20px rgba(160, 170, 180, 0.6);
-`;
+import CustomTooltip from '../Tooltip/CustomTooltip';
+import { StyledIconButton, StyledArrowIcon } from './ScrollToTopStyles';
 
 const ScrollToTop: React.FC = () => {
-  const [open, setOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
   const [buttonBottom, setButtonBottom] = useState('20px');
   const scrollThresholdRef = useRef(500);
@@ -29,7 +12,6 @@ const ScrollToTop: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>();
 
   const handleClick = () => {
-    setOpen(false);
     scroll.scrollToTop({ duration: 0 });
   };
 
@@ -71,24 +53,11 @@ const ScrollToTop: React.FC = () => {
 
   return (
     shouldRender && (
-      <Tooltip
-        title="Scroll to top"
-        placement="top"
-        open={open}
-        onOpen={() => setOpen(true)}
-        onClose={() => setOpen(false)}
-      >
-        <StyledIconButton
-          id="fab-scroll-to-top"
-          ref={fabRef}
-          style={{ bottom: buttonBottom }}
-          size="large"
-          aria-label="Scroll to top"
-          onClick={handleClick}
-        >
+      <CustomTooltip title="Scroll to top" arrow>
+        <StyledIconButton ref={fabRef} style={{ bottom: buttonBottom }} onClick={handleClick}>
           <StyledArrowIcon fontSize={40} />
         </StyledIconButton>
-      </Tooltip>
+      </CustomTooltip>
     )
   );
 };
