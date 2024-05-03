@@ -5,6 +5,7 @@
   "author": "Ratul Hasan @codehasan",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
