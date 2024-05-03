@@ -3,12 +3,12 @@ import { ImageFull, Img, Bio, Section, FeatureContainer } from './AboutStyles';
 import Skills from '../Tag/Skills';
 import HighlightedWords from '../Text/HighlightedWords';
 
-interface AboutProps {
+interface FeatureProps {
   header: string;
   body: string;
 }
 
-export const Feature = ({ header, body }: AboutProps) => {
+export const Feature: React.FC<FeatureProps> = ({ header, body }) => {
   return (
     <FeatureContainer>
       <h3 className="text-xl">{header}</h3>
@@ -17,7 +17,7 @@ export const Feature = ({ header, body }: AboutProps) => {
   );
 };
 
-function About() {
+const About: React.FC = () => {
   return (
     <Section id="about">
       <Bio>
@@ -42,6 +42,6 @@ function About() {
       </Bio>
     </Section>
   );
-}
+};
 
 export default About;

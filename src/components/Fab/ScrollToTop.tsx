@@ -19,8 +19,8 @@ const StyledArrowIcon = styled(MdKeyboardArrowUp)`
   box-shadow: 0px 4px 20px rgba(160, 170, 180, 0.6);
 `;
 
-function ScrollToTop() {
-  const [open, setOpen] = React.useState(false);
+const ScrollToTop: React.FC = () => {
+  const [open, setOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
   const [buttonBottom, setButtonBottom] = useState('20px');
   const scrollThresholdRef = useRef(500);
@@ -91,6 +91,6 @@ function ScrollToTop() {
       </Tooltip>
     )
   );
-}
+};
 
 export default ScrollToTop;

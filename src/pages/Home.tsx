@@ -6,7 +6,7 @@ import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import ScrollToTop from '../components/Fab/ScrollToTop';
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <Hero />
@@ -17,6 +17,6 @@ function Home() {
       <ScrollToTop />
     </>
   );
-}
+};
 
 export default Home;

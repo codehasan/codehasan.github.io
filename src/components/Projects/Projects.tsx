@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-function Projects() {
+const Projects: React.FC = () => {
   return (
     <>
       <div className="ProjectWrapper" id="projects">
@@ -12,6 +12,6 @@ function Projects() {
       </div>
     </>
   );
-}
+};
 
 export default Projects;

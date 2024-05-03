@@ -5,7 +5,7 @@ interface TagProps {
   tags: string[];
 }
 
-export default function Tags({ tags }: TagProps) {
+const Tags: React.FC<TagProps> = ({ tags }) => {
   return (
     <Wrapper>
       <StyledTags>
@@ -15,4 +15,6 @@ export default function Tags({ tags }: TagProps) {
       </StyledTags>
     </Wrapper>
   );
-}
+};
+
+export default Tags;

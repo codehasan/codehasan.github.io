@@ -2,7 +2,7 @@ import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter } from 'react-icons/fa';
 import { SocialIconSection } from './SocialLinksStyles';
 
-function SocialLinks() {
+const SocialLinks: React.FC = () => {
   return (
     <SocialIconSection>
       <a href="https://github.com/codehasan" target="_blank" rel="noopener noreferrer">
@@ -19,6 +19,6 @@ function SocialLinks() {
       </a>
     </SocialIconSection>
   );
-}
+};
 
 export default SocialLinks;

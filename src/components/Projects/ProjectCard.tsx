@@ -9,7 +9,7 @@ import {
   BtnGroup,
 } from './ProjectCardStyles';
 
-function ProjectCard() {
+const ProjectCard: React.FC = () => {
   return (
     <>
       {ProjectList.map((list, index) => (
@@ -52,6 +52,6 @@ function ProjectCard() {
       ))}
     </>
   );
-}
+};
 
 export default ProjectCard;

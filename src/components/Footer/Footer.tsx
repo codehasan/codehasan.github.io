@@ -9,7 +9,7 @@ import {
   SocialSection,
 } from './FooterStyles';
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <StyledFooter id="footer-base">
       <FooterContents>
@@ -32,6 +32,6 @@ function Footer() {
       </FooterContents>
     </StyledFooter>
   );
-}
+};
 
 export default Footer;

@@ -5,18 +5,20 @@ interface HighlightProps {
   title: string;
 }
 
-function HighlightedWords({ title }: HighlightProps) {
+const regex = /\*/g;
+
+const HighlightedWords: React.FC<HighlightProps> = ({ title }) => {
   return title.split(' ').map((text, i) => {
     if (text.includes('**')) {
       return (
         <Highlight key={i}>
-          <div>{text.replace('**', '')}</div>
+          <div>{text.replace(regex, '')}</div>
           <div></div>
         </Highlight>
       );
     }
-    return <span key={i}>{text}</span>;
+    return <div key={i}>{text}</div>;
   });
-}
+};
 
 export default HighlightedWords;

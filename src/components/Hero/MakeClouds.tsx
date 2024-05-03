@@ -15,7 +15,7 @@ interface MakeCloudProps {
   cloudCount: number;
 }
 
-const MakeClouds = ({ cloudCount }: MakeCloudProps) => {
+const MakeClouds: React.FC<MakeCloudProps> = ({ cloudCount }) => {
   const randomizeValue = (min: number, max: number) => {
     return Math.random() * (max - min) + min;
   };

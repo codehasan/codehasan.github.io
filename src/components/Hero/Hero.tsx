@@ -5,7 +5,7 @@ import SocialLinks from '../Social/SocialLinks';
 import MakeClouds from './MakeClouds';
 import HighlightedWords from '../Text/HighlightedWords';
 
-function Hero() {
+const Hero: React.FC = () => {
   return (
     <main>
       <Header />
@@ -28,6 +28,6 @@ function Hero() {
       </HeroContainer>
     </main>
   );
-}
+};
 
 export default Hero;

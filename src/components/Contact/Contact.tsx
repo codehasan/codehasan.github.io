@@ -4,8 +4,8 @@ import { FaEnvelope } from 'react-icons/fa';
 import { Section } from '../About/AboutStyles';
 import HighlightedWords from '../Text/HighlightedWords';
 
-function Contact() {
-  const [showTooltip, setShowTooltip] = useState(false);
+const Contact: React.FC = () => {
+  const [, setShowTooltip] = useState(false);
   const emailAddress = 'ratul.hasan.rahat.bd@gmail.com';
 
   const copyToClipboard = () => {
@@ -52,7 +52,7 @@ function Contact() {
             <FaEnvelope />
             <div className="info-content">
               <span>Email</span>
-              <span>{emailAddress}</span>
+              <span onClick={copyToClipboard}>{emailAddress}</span>
             </div>
           </div>
           <img src="/undraw_envelope.svg"></img>
@@ -60,6 +60,6 @@ function Contact() {
       </ContactWrapper>
     </Section>
   );
-}
+};
 
 export default Contact;

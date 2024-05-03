@@ -7,7 +7,7 @@ interface LazyImageProps {
   className?: string;
 }
 
-function LazyImage({ src, alt, className }: LazyImageProps) {
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -29,6 +29,6 @@ function LazyImage({ src, alt, className }: LazyImageProps) {
   return (
     <Image ref={imgRef} className={className} loading="lazy" decoding="async" src={src} alt={alt} />
   );
-}
+};
 
 export default LazyImage;

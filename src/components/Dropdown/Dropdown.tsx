@@ -6,7 +6,7 @@ interface DropdownProps {
   toggle: () => void;
 }
 
-function Dropdown({ isOpen, toggle }: DropdownProps) {
+const Dropdown: React.FC<DropdownProps> = ({ isOpen, toggle }) => {
   return (
     <SiderBar isOpen={isOpen} onClick={toggle}>
       <CloseIcon onClick={toggle} />
@@ -33,6 +33,6 @@ function Dropdown({ isOpen, toggle }: DropdownProps) {
       </NavBtn>
     </SiderBar>
   );
-}
+};
 
 export default Dropdown;

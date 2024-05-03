@@ -10,8 +10,8 @@ interface CloudProps {
   offset: string;
 }
 
-export default function Cloud({ roll, top, pulse, size, offset }: CloudProps) {
-  const [clouds] = useState([CloudIcons.C3(), CloudIcons.C4()]);
+const Cloud: React.FC<CloudProps> = ({ roll, top, pulse, size, offset }) => {
+  const [clouds] = useState([CloudIcons.C3, CloudIcons.C4]);
 
   function randomizeValue(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -22,7 +22,7 @@ export default function Cloud({ roll, top, pulse, size, offset }: CloudProps) {
       {clouds[randomizeValue(0, clouds.length)]}
     </SVGContainer>
   );
-}
+};
 
 export const SVGContainer = styled.div<{
   roll: string;
@@ -45,3 +45,5 @@ export const SVGContainer = styled.div<{
     color: white;
   }
 `;
+
+export default Cloud;

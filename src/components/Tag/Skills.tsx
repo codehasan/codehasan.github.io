@@ -14,7 +14,7 @@ const skills = [
   { name: 'Hardhat', type: 'tools' },
 ];
 
-export default function Skills() {
+const Skills: React.FC = () => {
   return (
     <Wrapper>
       <StyledTags>
@@ -26,4 +26,6 @@ export default function Skills() {
       </StyledTags>
     </Wrapper>
   );
-}
+};
+
+export default Skills;
