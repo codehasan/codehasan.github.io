@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import Cloud from './Cloud';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const CloudContainer = styled.div`
   width: 100%;

@@ -1,6 +1,6 @@
 import { FaTimes } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const SiderBar = styled.div<{ isOpen: boolean }>`
   background: #151418;

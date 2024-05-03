@@ -1,6 +1,6 @@
 import { FaBars } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Nav = styled.nav`
   background: var(--background-color-top);
