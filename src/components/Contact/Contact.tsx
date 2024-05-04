@@ -4,13 +4,13 @@ import { FaEnvelope } from 'react-icons/fa';
 import { Section } from '../About/AboutStyles';
 import HighlightedWords from '../Text/HighlightedWords';
 import { Button } from '../Button/Button';
+import { socialLinks } from '../../data/SocialLinks';
 
 const Contact: React.FC = () => {
   const [, setShowTooltip] = useState(false);
-  const emailAddress = 'ratul.hasan.rahat.bd@gmail.com';
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(emailAddress);
+    navigator.clipboard.writeText(socialLinks.gmail);
     setShowTooltip(true);
     setTimeout(() => {
       setShowTooltip(false);
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
             <FaEnvelope />
             <div className="info-content">
               <span>Email</span>
-              <span onClick={copyToClipboard}>{emailAddress}</span>
+              <span onClick={copyToClipboard}>{socialLinks.gmail}</span>
             </div>
           </div>
           <img src="/undraw_envelope.svg"></img>

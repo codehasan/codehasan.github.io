@@ -1,24 +1,12 @@
 import React from 'react';
 import { Wrapper, StyledTags } from './TagStyles';
-
-// cms: Content Management System
-const skills = [
-  { name: 'Solidity', type: 'backend' },
-  { name: 'Foundry', type: 'backend' },
-  { name: 'Typescript', type: 'backend' },
-  { name: 'React', type: 'frontend' },
-  { name: 'Node.js', type: 'backend' },
-  { name: 'HTML', type: 'frontend' },
-  { name: 'CSS', type: 'frontend' },
-  { name: 'Next.js', type: 'frontend' },
-  { name: 'Hardhat', type: 'tools' },
-];
+import { aboutMe } from '../../data/AboutData';
 
 const Skills: React.FC = () => {
   return (
     <Wrapper>
       <StyledTags>
-        {skills.map((skill, i) => (
+        {aboutMe.skills.map((skill, i) => (
           <li key={i} className={skill.type}>
             {skill.name}
           </li>

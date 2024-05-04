@@ -12,7 +12,7 @@ export const HeroWrapper = styled.div`
 export const HeroSection = styled.section`
   max-width: 1100px;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #ffff;
   padding: 1.2rem 2rem 1.2rem;
 `;
@@ -36,6 +36,20 @@ export const HeroText = styled.div`
     margin-top: 2rem;
     font-weight: var(--fs-thin);
     color: #f6f6f6;
+
+    span {
+      display: inline-block;
+      height: 100%;
+      text-align: center;
+      line-height: 0;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
   }
 
   @media only screen and (min-width: 768px) {

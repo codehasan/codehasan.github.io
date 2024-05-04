@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from './HeaderStyles';
 import { Button } from '../Button/Button';
+import { socialLinks } from '../../data/SocialLinks';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header: React.FC = () => {
             </NavLink>
           </NavMenu>
           <NavBtn>
-            <a href="https://linkedin.com/in/codehasan" target="_blank" rel="noopener noreferrer">
+            <a href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
               <Button primary>Resume</Button>
             </a>
           </NavBtn>

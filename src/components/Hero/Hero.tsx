@@ -4,6 +4,7 @@ import { HeroContainer, HeroWrapper, HeroText, HeroSection } from './HeroStyles'
 import SocialLinks from '../Social/SocialLinks';
 import MakeClouds from '../Cloud/MakeClouds';
 import HighlightedWords from '../Text/HighlightedWords';
+import { heroDetails } from '../../data/HeroData';
 
 const Hero: React.FC = () => {
   return (
@@ -15,12 +16,15 @@ const Hero: React.FC = () => {
             <MakeClouds cloudCount={30} />
             <HeroText>
               <h1>
-                <HighlightedWords title={"Hi, I'm Ratul | **Blockchain** **Developer**"} />
+                <HighlightedWords title={heroDetails.heading} />
               </h1>
               <SocialLinks />
               <p>
-                I love exploring and creating 🚀 I'm a lifelong learner 🎓 and I might have a thing
-                for traditional Neapolitan Pizza 🍕
+                {heroDetails.description}
+                &nbsp;
+                <span>
+                  <img src="/chess.png"></img>
+                </span>
               </p>
             </HeroText>
           </HeroSection>

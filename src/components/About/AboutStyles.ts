@@ -112,5 +112,6 @@ export const Img = styled(LazyImage)`
 export const FeatureContainer = styled.div`
   h3 {
     margin-bottom: 1rem !important;
+    white-space: pre;
   }
 `;

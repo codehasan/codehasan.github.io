@@ -1,6 +1,7 @@
 import React from 'react';
 import { SiderBar, CloseIcon, NavMenu, NavLink, NavBtn } from './DropdownStyles';
 import { Button } from '../Button/Button';
+import { socialLinks } from '../../data/SocialLinks';
 
 interface DropdownProps {
   isOpen: boolean;
@@ -23,11 +24,7 @@ const Dropdown: React.FC<DropdownProps> = ({ isOpen, toggle }) => {
         </NavLink>
       </NavMenu>
       <NavBtn onClick={toggle}>
-        <a
-          href="https://linkedin.com/in/pedro-sales-muniz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
           <Button primary>Resume</Button>
         </a>
       </NavBtn>

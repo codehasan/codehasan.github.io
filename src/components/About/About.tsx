@@ -2,6 +2,7 @@ import React from 'react';
 import { ImageFull, Img, Bio, Section, FeatureContainer } from './AboutStyles';
 import Skills from '../Tag/Skills';
 import HighlightedWords from '../Text/HighlightedWords';
+import { aboutMe } from '../../data/AboutData';
 
 interface FeatureProps {
   header: string;
@@ -26,17 +27,12 @@ const About: React.FC = () => {
             <HighlightedWords title={'My **Skills**'} />
           </h1>
           <ImageFull id="bioImage">
-            <Img alt={'A picture of Ratul'} src={'/img/portrait.jpg'} />
+            <Img alt={aboutMe.portrait.alt} src={aboutMe.portrait.src} />
           </ImageFull>
 
           <div id="bioText">
             <Skills />
-            <Feature
-              header={'I love building stuff 📱'}
-              body={
-                'I started playing with computers when I was 11 years-old. Since then I have been tinkering with all sorts of technologies that in some way or another led me to work on music, photography, sound engineering, electric engineering, automation, video production, feature film post-production, VR games, and 3D sound.'
-              }
-            />
+            <Feature header={aboutMe.header} body={aboutMe.bio} />
           </div>
         </div>
       </Bio>

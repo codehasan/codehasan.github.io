@@ -62,7 +62,7 @@ export const NavBtn = styled.div`
   align-items: center;
   margin-right: 24px;
 
-  a {
+  button {
     font-size: 1.1rem !important;
   }
 
